@@ -1,6 +1,3 @@
-require(game.ReplicatedStorage.Notification).new("<Color=Red>nigga<Color=/>"):Display()
-wait(2)
-
 if _G.Team == "Marines" then
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Marines")
 elseif _G.Team == "Pirates" then
@@ -54,15 +51,16 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
 	   Status = Window:AddTab({ Title = "Status" }),
 				Setting = Window:AddTab({ Title = "Setting Fram" }),
-				Farm = Window:AddTab({ Title = "Auto Farming" }),
+				AutoFarm = Window:AddTab({ Title = "Auto Farming" }),
     Local = Window:AddTab({ Title = "Local Player" }),
-    Sh = Window:AddTab({ Title = "Shop" }),
+    Shop = Window:AddTab({ Title = "Shop" }),
     Stack = Window:AddTab({ Title = "Stack Auto Farm" }),
     Other = Window:AddTab({ Title = "Other Fram" }),
     Upgrade = Window:AddTab({ Title = "Upgrade Race" }),
     Fruit = Window:AddTab({ Title = "Fruit & Raid" }),
     Sea = Window:AddTab({ Title = "Sea Event" }),
 				Item = Window:AddTab({ Title = "Quest & Item" }),
+				Config = Window:AddTab({ Title = "Config Ui" }),
 }
 local Options = Fluent.Options
 
@@ -2209,7 +2207,7 @@ spawn(function()
 spawn(function()
   pcall(function()
     game:GetService("RunService").Stepped:Connect(function()
-      if StModeFarm or _G.AutoEvoRace or _G.CastleRaid or _G.CollectAzure or _G.TweenToKitsune or _G.GhostShip or _G.Ship or _G.Auto_Holy_Torch or _G.TeleportPly or _G.Tweenfruit or _G.AutoFishCrew or _G.AutoShark or _G.AutoCakeV2 or _G.FocusedBoss or AutoFarmAcient or _G.AutoQuestRace or Auto_Law or AutoTushita or _G.AutoHolyTorch or _G.AutoTerrorshark or _G.farmpiranya or _G.AutoNear or _G.Ectoplasm or AutoEvoRace or AutoBartilo or _G.AutoLevel or _G.Clip2 or _G.AutoBone or _G.AutoBoss or AutoFarmMasGun or AutoFarmMasDevilFruit or AutoHallowSycthe or AutoTushita or _G.CakePrince or _G.AutoEliteor or AutoNextIsland or Musketeer or _G.AutoMaterial or _G.Factory or _G.SwanGlasses or _G.AutoFrozenDimension or _G.AutoUpgrade or _G.TweenToFrozenDimension or _G.hadesinvis then
+      if StModeFarm or_G.AutoEvoRace or _G.CastleRaid or _G.CollectAzure or _G.TweenToKitsune or _G.GhostShip or _G.Ship or _G.Auto_Holy_Torch or _G.TeleportPly or _G.Tweenfruit or _G.AutoFishCrew or _G.AutoShark or _G.AutoCakeV2 or _G.FocusedBoss or AutoFarmAcient or _G.AutoQuestRace or Auto_Law or AutoTushita or _G.AutoHolyTorch or _G.AutoTerrorshark or _G.farmpiranya or _G.AutoNear or _G.Ectoplasm or AutoEvoRace or AutoBartilo or _G.AutoLevel or _G.Clip2 or _G.AutoBone or _G.AutoBoss or AutoFarmMasGun or AutoFarmMasDevilFruit or AutoHallowSycthe or AutoTushita or _G.CakePrince or _G.AutoEliteor or AutoNextIsland or Musketeer or _G.AutoMaterial or _G.Factory or _G.SwanGlasses or _G.AutoFrozenDimension or _G.AutoUpgrade or _G.TweenToFrozenDimension or _G.hadesinvis then
       for i,v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
       if v:IsA("BasePart") then
       v.CanCollide = false
@@ -2479,14 +2477,14 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0)
 L2.Size = UDim2.new(0, 50, 0, 50)
 L2.Font = Enum.Font.LuckiestGuy
-L2.Text = "Xeni"
+L2.Text = "Xeno"
 L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = false
 sound.Parent = L2
 sound.SoundId = "rbxassetid://965305329"
 L2.MouseButton1Click:Connect(function()
-    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
     sound:Play()
 				end)
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death") then
@@ -2510,7 +2508,7 @@ spawn(function()
 end)
 
 local Mob_Kill_Cake_Prince = Tabs.Status:AddParagraph({
-    Title = "Dimension Kill",
+    Title = "Cake Prince & Katakuri",
     Content = ""
 })
 
@@ -2518,13 +2516,13 @@ spawn(function()
 	while wait() do
 		pcall(function()
 			if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
-				Mob_Kill_Cake_Prince:SetDesc("Dimension Kill: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).."")
+				Mob_Kill_Cake_Prince:SetDesc("Cake Prince-Katakuri: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41).."")
 			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
-				Mob_Kill_Cake_Prince:SetDesc("Dimension Kill: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40).."")
+				Mob_Kill_Cake_Prince:SetDesc("Cake Prince-Katakuri: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40).."")
 			elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
-				Mob_Kill_Cake_Prince:SetDesc("Dimension Kill: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." ")
+				Mob_Kill_Cake_Prince:SetDesc("Cake Prince-Katakuri: "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." ")
 			else
-				Mob_Kill_Cake_Prince:SetDesc("Dimension Kill : 🟢")
+				Mob_Kill_Cake_Prince:SetDesc("Cake Prince-Katakuri : 🟢")
 			end
 		end)
 	end
@@ -2714,44 +2712,6 @@ task.spawn(function()
 		end)
 	end
 	end)
-	
-	local ToggleAutoT = Tabs.Setting:AddToggle("ToggleAutoT", {Title = "Turn On V3", Description = "", Default = false })
-ToggleAutoT:OnChanged(function(Value)
-    _G.AutoT = Value
-				saveSettings() 
-    end)
- Options.ToggleAutoT:SetValue(false)
- spawn(function()
-    while wait() do
-        pcall(function()
-            if _G.AutoT then
-                game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("ActivateAbility")
-            end
-        end)
-    end
-    end)
-
-
-local ToggleAutoY = Tabs.Setting:AddToggle("ToggleAutoY", {Title = "Turn On V4", Description = "", Default = false })
-ToggleAutoY:OnChanged(function(Value)
-    _G.AutoY = Value
-				saveSettings() 
-end)
-
-Options.ToggleAutoY:SetValue(false)
-
-spawn(function()
-    while wait() do
-        pcall(function()
-            if _G.AutoY then
-                game:GetService("VirtualInputManager"):SendKeyEvent(true, "Y", false, game)
-                wait()
-                game:GetService("VirtualInputManager"):SendKeyEvent(false, "Y", false, game)
-            end
-        end)
-    end
-				end)
-				
 
 	local ToggleFast = Tabs.Setting:AddToggle("ToggleFast", {Title = "Fast Attack",Description = "Auto Click & M1 Fruit Click", Default = true })
     ToggleFast:OnChanged(function(Value)
@@ -2844,26 +2804,7 @@ ToggleRemoveNotify:OnChanged(function(Value)
         end
 								end)	
 								
-    local Toggle = Tabs.Setting:AddToggle("MyToggle", {Title = "Auto Turn On Buso", Default = false })
-
-    Toggle:OnChanged(function(Value)
-        _G.AUTOHAKI = Value
-    end)
-    
-    spawn(function()
-    while wait(.1) do
-        if _G.AUTOHAKI then 
-            if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-                local args = {
-                    [1] = "Buso"
-                }
-                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-            end
-        end
-    end
-				end)
-								
-local ToggleAutoKen = Tabs.Setting:AddToggle("ToggleAutoKen", {Title = "Auto Turn On Ken", Description = "", Default = false })
+local ToggleAutoKen = Tabs.Setting:AddToggle("ToggleAutoKen", {Title = "Auto Ken", Description = "", Default = false })
 ToggleAutoKen:OnChanged(function(Value)
     _G.AutoKen = Value
 				saveSettings() 
@@ -2886,31 +2827,6 @@ spawn(function()
     end
 				end)
 				
-				local ToggleSpawnCake = Tabs.Setting:AddToggle("ToggleSpawnCake", {
-        Title = "Auto Spawn Cake Prince",
-        Description = "", 
-        Default = true })
-    ToggleSpawnCake:OnChanged(function(Value)
-      _G.SpawnCakePrince = Value
-    end)
-    Options.ToggleSpawnCake:SetValue(true)
-
-spawn(function()
-  while wait() do
-    if _G.SpawnCakePrince then
-      local args = {
-        [1] = "CakePrinceSpawner",
-        [2] = true
-      }
-      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))                    
-      local args = {
-        [1] = "CakePrinceSpawner"
-      }
-      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-    end
-  end
-		end)
-				
 local ToggleWhite = Tabs.Setting:AddToggle("ToggleWhite", {Title = "White Screen",Description = "", Default = false })
     ToggleWhite:OnChanged(function(Value)
        _G.WhiteScreen = Value
@@ -2923,59 +2839,43 @@ local ToggleWhite = Tabs.Setting:AddToggle("ToggleWhite", {Title = "White Screen
         end)
         Options.ToggleWhite:SetValue(false)
 								
-Toggle = Tabs.Setting:AddToggle("MyToggle", {Title = "Hide Mobs", Description = "", Default = false })
-    Toggle:OnChanged(function(Value)
-        _G.hadesinvis = Value		
-        saveSettings() 
+	local ToggleAutoT = Tabs.Setting:AddToggle("ToggleAutoT", {Title = "Turn On V3", Description = "", Default = false })
+ToggleAutoT:OnChanged(function(Value)
+    _G.AutoT = Value
+				saveSettings() 
     end)
-    spawn(function()
+ Options.ToggleAutoT:SetValue(false)
+ spawn(function()
     while wait() do
-        if _G.hadesinvis then
-            pcall(function()
-                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                    if v.ClassName == "MeshPart" then
-                        v.Transparency = 1
-                    end
-                end
-                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                    if v.Name == "Head" then
-                        v.Transparency = 1
-                    end
-                end
-                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                    if v.ClassName == "Accessory" then
-                        v.Handle.Transparency = 1
-                    end
-                end
-                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                    if v.ClassName == "Decal" then
-                        v.Transparency = 1
-                    end
-                end
-            end)
-        end
-    end
-end)
-
-local ToggleNoClip = Tabs.Setting:AddToggle("ToggleNoClip", {Title = "No Clip",Description = "", Default = true })
-ToggleNoClip:OnChanged(function(value)
-    _G.LOf = value
-end)
-Options.ToggleNoClip:SetValue(true)
-spawn(function()
-    pcall(function()
-        game:GetService("RunService").Stepped:Connect(function()
-            if _G.LOf then
-                for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-                    if v:IsA("BasePart") then
-                        v.CanCollide = false    
-                    end
-                end
+        pcall(function()
+            if _G.AutoT then
+                game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("ActivateAbility")
             end
         end)
+    end
     end)
+
+
+local ToggleAutoY = Tabs.Setting:AddToggle("ToggleAutoY", {Title = "Turn On V4", Description = "", Default = false })
+ToggleAutoY:OnChanged(function(Value)
+    _G.AutoY = Value
+				saveSettings() 
+end)
+
+Options.ToggleAutoY:SetValue(false)
+
+spawn(function()
+    while wait() do
+        pcall(function()
+            if _G.AutoY then
+                game:GetService("VirtualInputManager"):SendKeyEvent(true, "Y", false, game)
+                wait()
+                game:GetService("VirtualInputManager"):SendKeyEvent(false, "Y", false, game)
+            end
+        end)
+    end
 				end)
-								
+				
 	local ToggleGun = Tabs.Setting:AddToggle("ToggleGun", {
     Title = "Use Dual Flinlock",
     Description = "I don't know if it's still in use or not",
@@ -3134,94 +3034,46 @@ ToggleF:OnChanged(function(Value)
 Options.ToggleF:SetValue(false)
 
 
-Tabs.Farm:AddParagraph({
+Tabs.AutoFarm:AddParagraph({
         Title = "",
-        Content = "Tabs Auto Farming"
+        Content = "Auto-Farm"
 								})
 								
-				local ToggleHakiFortress = Tabs.Farm:AddToggle("ToggleHakiFortress", { 
-    Title = "Auto Enable Haki", 
-    Description = "", 
-    Default = false 
-})
-ToggleHakiFortress:OnChanged(function(Value)
-    _G.EnableHakiFortress = Value
+				Toggle = Tabs.AutoFarm:AddToggle("MyToggle", {Title = "Hide Mobs", Description = "invisible monster for have better fps", Default = false })
+    Toggle:OnChanged(function(Value)
+        _G.hadesinvis = Value		
+        saveSettings() 
+    end)
+    spawn(function()
+    while wait() do
+        if _G.hadesinvis then
+            pcall(function()
+                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
+                    if v.ClassName == "MeshPart" then
+                        v.Transparency = 1
+                    end
+                end
+                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
+                    if v.Name == "Head" then
+                        v.Transparency = 1
+                    end
+                end
+                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
+                    if v.ClassName == "Accessory" then
+                        v.Handle.Transparency = 1
+                    end
+                end
+                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
+                    if v.ClassName == "Decal" then
+                        v.Transparency = 1
+                    end
+                end
+            end)
+        end
+    end
 end)
-Options.ToggleHakiFortress:SetValue(false)
 
-local function EquipAuraAndTeleport(storageName, targetPosition)
-    local args = {
-        [1] = {
-            ["StorageName"] = storageName,
-            ["Type"] = "AuraSkin",
-            ["Context"] = "Equip"
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Modules.Net:FindFirstChild("RF/FruitCustomizerRF"):InvokeServer(unpack(args))
-    toTarget(targetPosition)
-end
-
--- Function to check if the player is at the target position
-local function IsAtPosition(targetPosition, tolerance)
-    local character = game.Players.LocalPlayer.Character
-    if not character or not character:FindFirstChild("HumanoidRootPart") then
-        return false
-    end
-    
-    local characterPosition = character.HumanoidRootPart.Position
-    return (characterPosition - targetPosition).Magnitude < tolerance
-end
-
-spawn(function()
-    while true do
-        if _G.EnableHakiFortress then
-            -- Equip Snow White and teleport to its position
-            EquipAuraAndTeleport("Snow White", Vector3.new(-4971.71826171875, 335.9582214355469, -3720.0595703125))
-            
-            -- Wait until the player reaches the target position
-            while not IsAtPosition(Vector3.new(-4971.71826171875, 335.9582214355469, -3720.0595703125), 1) do
-                wait(0.1)
-            end
-            
-            wait(0.5) -- Wait after reaching the position
-
-            -- Equip Pure Red and teleport to its position
-            EquipAuraAndTeleport("Pure Red", Vector3.new(-5414.92041015625, 314.2582092285156, -2212.20166015625))
-            
-            -- Wait until the player reaches the target position
-            while not IsAtPosition(Vector3.new(-5414.92041015625, 314.2582092285156, -2212.20166015625), 1) do
-                wait(0.1)
-            end
-            
-            wait(0.5) -- Wait after reaching the position
-
-            -- Equip Winter Sky and teleport to its position
-            EquipAuraAndTeleport("Winter Sky", Vector3.new(-5420.26318359375, 1089.3582763671875, -2666.8193359375))
-            
-            -- Wait until the player reaches the target position
-            while not IsAtPosition(Vector3.new(-5420.26318359375, 1089.3582763671875, -2666.8193359375), 1) do
-                wait(0.1)
-            end
-            
-            wait(0.5) -- Wait after reaching the position
-
-            -- Stop after finishing the sequence
-            _G.EnableHakiFortress = false
-        end
-        wait(0.5)
-    end
-				end)	
-								
-					Tabs.Farm:AddButton({
-        Title = "Reset Character",
-        Description = "",
-        Callback = function()            
-game.Players.LocalPlayer.Character.Head:Destroy()
-        end
-								})		
-
-    local DropdownModeFarm = Tabs.Farm:AddDropdown("DropdownModeFarm", {
+    local DropdownModeFarm = Tabs.AutoFarm:AddDropdown("DropdownModeFarm", {
         Title = "Select Mode Farm",
         Description = "",
         Values = {"Farm Level","Farm Bone","Farm Katakuri",},
@@ -3235,7 +3087,7 @@ game.Players.LocalPlayer.Character.Head:Destroy()
         TypeMode = Value
     end)
 
-    local ToggleStartMode = Tabs.Farm:AddToggle("ToggleStartMode", {
+    local ToggleStartMode = Tabs.AutoFarm:AddToggle("ToggleStartMode", {
         Title = "Start Farm",
         Description = "", 
         Default = false })
@@ -3420,185 +3272,12 @@ game.Players.LocalPlayer.Character.Head:Destroy()
     end
 end)
 
-Tabs.Sh:AddParagraph({
-        Title = "",
-        Content = "Tabs Shopping"
-								})
-								
-				Tabs.Sh:AddButton({
-        Title = "Sanguine Art",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
-        end
+				game.StarterGui:SetCore("SendNotification", {
+        Title = "Xeno",
+        Text = "Whitelisted !",
+        Icon = "rbxassetid://11995210995",
+        Duration = 5,
     })
-    
-    Tabs.Sh:AddButton({
-        Title = "God Human",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Superhuman",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Death Step",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Sharkman Karate",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Dragon Talon",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Dragon Talon",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Electric Claw",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Dark Step",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Electro",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Fishman Karate",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Dragon Claw",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
-        end
-								})				
-								
-								Tabs.Sh:AddParagraph({
-        Title = "",
-        Content = "Abilities"
-								})
-								
-								Tabs.Sh:AddButton({
-        Title = "Sky Jumb [$ 10,000 Beli ]",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Buso Haki [$ 25,000 Beli ]",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Observation haki [$ 750,000 Beli ]",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Soru  [$ 100,000 Beli ]",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
-        end
-    })
-    
-    Tabs.Sh:AddParagraph({
-        Title = "",
-        Content = "Race & Misc"
-								})
-    
-    Tabs.Sh:AddButton({
-        Title = "Ghould",
-        Description = "",
-        Callback = function()            
-local args = {[1] = "Ectoplasm", [2] = "BuyCheck", [3] = 4}
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-        local args = {[1] = "Ectoplasm", [2] = "Change", [3] = 4}
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Cyborg",
-        Description = "",
-        Callback = function()            
-local args = {[1] = "CyborgTrainer", [2] = "Buy"}
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Reroll Race",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
-	    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")
-        end
-    })
-    
-    Tabs.Sh:AddButton({
-        Title = "Refund Stats",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
-        end
-								})
+				
+				Camera:Stop()
+				
