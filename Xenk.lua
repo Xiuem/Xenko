@@ -5,7 +5,7 @@ elseif _G.Team == "Pirates" then
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Pirates")
 end
 
-local foldername = "Xenok"
+local foldername = "Xenko"
 local filename = foldername.."/SaveSetting.json"
 function saveSettings()
     local HttpService = game:GetService("HttpService")
@@ -37,7 +37,7 @@ loadSettings()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Xenoko",
+    Title = "Xenko",
     SubTitle = " by realrix!", 
     TabWidth = 160, 
     Size = UDim2.fromOffset(580, 320), 
