@@ -2447,43 +2447,29 @@ function to(p)
 		end)
 	end
 
-local player = game.Players.LocalPlayer
-local L1 = Instance.new("ScreenGui")
-local L2 = Instance.new("TextButton")
-local L3 = Instance.new("UICorner")
-local L4 = Instance.new("ImageLabel")
-local sound = Instance.new("Sound")
-L3.Name = "UICorner"
-L3.Parent = L2
-L4.Name = "ButtonImage"
-L4.Parent = L2
-L4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-L4.BackgroundTransparency = 1.000
-L4.BorderSizePixel = 0
-L4.Position = UDim2.new(0.1, 0, 0.1, 0) 
-L4.Size = UDim2.new(0, 45, 0, 45)
-L4.Image = ""
-L1.Name = "MainGui"
-L1.Parent = player:WaitForChild("PlayerGui")
-L1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-L2.Name = "CustomButton"
-L2.Parent = L1
-L2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-L2.BackgroundTransparency = 0.2
-L2.BorderSizePixel = 0
-L2.Position = UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0)
-L2.Size = UDim2.new(0, 50, 0, 50)
-L2.Font = Enum.Font.LuckiestGuy
-L2.Text = "Xeni"
-L2.TextColor3 = Color3.fromRGB(255, 255, 255)
-L2.TextSize = 9.000
-L2.Draggable = false
-sound.Parent = L2
-sound.SoundId = "rbxassetid://965305329"
-L2.MouseButton1Click:Connect(function()
-    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
-    sound:Play()
-				end)
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Image = "rbxassetid://14299284116"
+ImageButton.MouseButton1Click:Connect(function()
+    game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)
+end)
+
+UICorner.Parent = ImageButton
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Parent = ImageButton
+
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death") then
 	game:GetService("ReplicatedStorage").Effect.Container.Death:Destroy()
 end
